@@ -843,41 +843,309 @@
             letter-spacing: 0.1em;
         }
 
+        .pdf-mobile-link {
+            display: none;
+            text-align: center;
+            padding: 14px;
+            background: var(--navy-light);
+            color: var(--gold-light);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.06em;
+            border: 2px solid var(--border-govt);
+            border-top: none;
+        }
+
+        .pdf-mobile-link:hover {
+            background: var(--navy);
+        }
+
+        @media (max-width: 768px) {
+            .pdf-mobile-link {
+                display: block;
+            }
+        }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
-            .subject-profile {
-                grid-template-columns: 1fr;
+            .container {
+                padding: 0 14px;
             }
 
+            /* Header */
             .header-inner {
                 flex-direction: column;
                 text-align: center;
+                padding: 16px 0;
+                gap: 12px;
             }
 
+            .seal {
+                width: 64px;
+                height: 64px;
+            }
+
+            .seal-text .eagle {
+                font-size: 1.3rem;
+            }
+
+            .seal-text {
+                font-size: 0.45rem;
+            }
+
+            .header-text h1 {
+                font-size: 1.15rem;
+            }
+
+            .header-text h1 .dept {
+                font-size: 0.6rem;
+                letter-spacing: 0.08em;
+            }
+
+            .header-text .subtitle {
+                font-size: 0.7rem;
+            }
+
+            /* Nav */
             .nav-bar ul {
                 flex-wrap: wrap;
                 justify-content: center;
             }
 
-            .footer-inner {
-                flex-direction: column;
-                gap: 24px;
+            .nav-bar li a {
+                padding: 8px 12px;
+                font-size: 0.68rem;
+                letter-spacing: 0.04em;
+            }
+
+            /* Classification banner */
+            .classification-banner {
+                font-size: 0.6rem;
+                letter-spacing: 0.15em;
+                padding: 8px 10px;
+            }
+
+            /* Main content */
+            .main-content {
+                padding: 20px 0 40px;
+            }
+
+            /* Case header */
+            .case-header {
+                padding: 20px 16px;
+                padding-top: 48px;
             }
 
             .case-header::before {
-                position: static;
-                display: block;
-                transform: none;
-                text-align: center;
-                margin-bottom: 12px;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-size: 0.75rem;
+                padding: 2px 8px;
+                border-width: 2px;
             }
 
-            .evidence-grid {
-                grid-template-columns: 1fr;
+            .case-header h2 {
+                font-size: 1.15rem;
+            }
+
+            .case-number {
+                font-size: 0.65rem;
+            }
+
+            .case-meta {
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+
+            /* Alert box */
+            .alert-box {
+                font-size: 0.78rem;
+                padding: 12px 14px;
+            }
+
+            /* Section headers */
+            .section-header {
+                font-size: 0.95rem;
+                margin-top: 28px;
+                margin-bottom: 16px;
+                gap: 8px;
+                flex-wrap: wrap;
+            }
+
+            /* Subject profile / mugshot */
+            .subject-profile {
+                grid-template-columns: 1fr !important;
+                padding: 16px;
+                gap: 20px;
+            }
+
+            .mugshot-container img {
+                max-width: 260px;
+                margin: 0 auto;
+                display: block;
+            }
+
+            .mugshot-label {
+                font-size: 0.6rem;
+                max-width: 260px;
+                margin: 0 auto;
+            }
+
+            .subject-details h3 {
+                font-size: 1rem;
             }
 
             .detail-grid {
                 grid-template-columns: 1fr;
+            }
+
+            /* Dossier blocks */
+            .dossier-block {
+                padding: 18px 14px;
+            }
+
+            .dossier-block p {
+                font-size: 0.8rem;
+            }
+
+            /* Evidence grid */
+            .evidence-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .evidence-card img {
+                height: 200px;
+            }
+
+            .stamp-overlay::after {
+                font-size: 0.85rem;
+                padding: 2px 10px;
+                bottom: 10px;
+                right: 10px;
+            }
+
+            /* Full evidence */
+            .full-evidence .caption {
+                flex-direction: column;
+                gap: 6px;
+                font-size: 0.7rem;
+                padding: 10px 14px;
+            }
+
+            /* Document table - card layout on mobile */
+            .doc-table-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .doc-table {
+                min-width: 600px;
+            }
+
+            .doc-table th,
+            .doc-table td {
+                padding: 8px 10px;
+                font-size: 0.72rem;
+            }
+
+            /* PDF embeds - link fallback on mobile since iframes don't work well */
+            .pdf-embed {
+                height: 60vh;
+                min-height: 400px;
+            }
+
+            .pdf-header {
+                flex-direction: column;
+                gap: 4px;
+                padding: 8px 14px;
+                text-align: center;
+            }
+
+            .pdf-header .pdf-title {
+                font-size: 0.72rem;
+            }
+
+            /* Timeline */
+            .timeline {
+                padding-left: 24px;
+            }
+
+            .timeline-entry {
+                padding: 12px 14px;
+            }
+
+            .timeline-entry::before {
+                left: -21px;
+                width: 10px;
+                height: 10px;
+            }
+
+            .timeline-date {
+                font-size: 0.68rem;
+            }
+
+            .timeline-entry h4 {
+                font-size: 0.82rem;
+            }
+
+            .timeline-entry p {
+                font-size: 0.75rem;
+            }
+
+            /* Footer */
+            .footer-inner {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .footer-col h5 {
+                font-size: 0.65rem;
+            }
+
+            .footer-col p,
+            .footer-col a {
+                font-size: 0.68rem;
+            }
+
+            .footer-bottom {
+                font-size: 0.6rem;
+            }
+
+            /* Watermark */
+            .watermark {
+                font-size: 3rem;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 420px) {
+            .header-text h1 {
+                font-size: 1rem;
+            }
+
+            .case-header h2 {
+                font-size: 1rem;
+            }
+
+            .case-meta {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-bar li a {
+                padding: 6px 8px;
+                font-size: 0.6rem;
+            }
+
+            .evidence-card img {
+                height: 160px;
+            }
+
+            .pdf-embed {
+                height: 50vh;
+                min-height: 300px;
             }
         }
 
@@ -1262,6 +1530,7 @@
                     <span class="pdf-class">DECLASSIFIED</span>
                 </div>
                 <iframe class="pdf-embed" src="images/arrest_warrant.pdf" title="Arrest Warrant"></iframe>
+                <a href="images/arrest_warrant.pdf" target="_blank" class="pdf-mobile-link">Open Document in New Tab &#8599;</a>
             </div>
 
             <div class="pdf-embed-section">
@@ -1270,6 +1539,7 @@
                     <span class="pdf-class">CONFIDENTIAL // NOFORN</span>
                 </div>
                 <iframe class="pdf-embed" src="images/intelligence_briefing.pdf" title="Intelligence Briefing"></iframe>
+                <a href="images/intelligence_briefing.pdf" target="_blank" class="pdf-mobile-link">Open Document in New Tab &#8599;</a>
             </div>
 
             <!-- TIMELINE -->
@@ -1358,6 +1628,7 @@
                     <span class="pdf-class">SECRET // ORCON</span>
                 </div>
                 <iframe class="pdf-embed" src="images/witness_affidavits.pdf" title="Witness Affidavits"></iframe>
+                <a href="images/witness_affidavits.pdf" target="_blank" class="pdf-mobile-link">Open Document in New Tab &#8599;</a>
             </div>
 
             <div class="pdf-embed-section">
@@ -1366,6 +1637,7 @@
                     <span class="pdf-class">SECRET // NOFORN</span>
                 </div>
                 <iframe class="pdf-embed" src="images/flight_logs_analysis.pdf" title="Flight Logs Analysis"></iframe>
+                <a href="images/flight_logs_analysis.pdf" target="_blank" class="pdf-mobile-link">Open Document in New Tab &#8599;</a>
             </div>
 
             <div class="pdf-embed-section">
@@ -1374,6 +1646,7 @@
                     <span class="pdf-class">SECRET // REL FVEY</span>
                 </div>
                 <iframe class="pdf-embed" src="images/financial_ledgers.pdf" title="Financial Ledgers"></iframe>
+                <a href="images/financial_ledgers.pdf" target="_blank" class="pdf-mobile-link">Open Document in New Tab &#8599;</a>
             </div>
 
         </div>
