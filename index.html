@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE JAWAD FILES — U.S. Department of Justice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700;900&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1a2744;
+            --navy-deep: #0e1a2e;
+            --navy-light: #2a3d5e;
+            --gold: #c5a44e;
+            --gold-light: #d4b96a;
+            --gold-dark: #a08234;
+            --cream: #f5f0e6;
+            --cream-dark: #e8e0d0;
+            --red-seal: #8b1a1a;
+            --red-stamp: #cc2222;
+            --paper: #faf8f2;
+            --paper-aged: #f0ead8;
+            --ink: #1a1a1a;
+            --ink-faded: #4a4a4a;
+            --border-govt: #8c8c8c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans 3', 'Helvetica Neue', sans-serif;
+            background: var(--cream);
+            color: var(--ink);
+            line-height: 1.6;
+        }
+
+        /* ===== TOP GOVERNMENT BANNER ===== */
+        .govt-banner {
+            background: var(--navy-deep);
+            color: #fff;
+            font-size: 0.75rem;
+            padding: 6px 0;
+            letter-spacing: 0.04em;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .govt-banner .container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .govt-banner .flag-icon {
+            font-size: 0.9rem;
+        }
+
+        .govt-banner span {
+            opacity: 0.85;
+        }
+
+        .govt-banner a {
+            color: var(--gold-light);
+            text-decoration: underline;
+            margin-left: 4px;
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            background: var(--navy);
+            padding: 0;
+            border-bottom: 4px solid var(--gold);
+            position: relative;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            gap: 24px;
+        }
+
+        .seal {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 35%, var(--gold-light), var(--gold-dark));
+            border: 3px solid var(--gold-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 0 20px rgba(197, 164, 78, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .seal::before {
+            content: '';
+            position: absolute;
+            inset: 4px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .seal-text {
+            font-family: 'Merriweather', serif;
+            font-size: 0.55rem;
+            font-weight: 900;
+            color: var(--navy-deep);
+            text-align: center;
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .seal-text .eagle {
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 2px;
+            filter: grayscale(0.3);
+        }
+
+        .header-text h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .header-text h1 .dept {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: var(--gold-light);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+
+        .header-text .subtitle {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+            margin-top: 4px;
+            font-weight: 300;
+            letter-spacing: 0.06em;
+        }
+
+        /* ===== NAV BAR ===== */
+        .nav-bar {
+            background: var(--navy-light);
+            border-bottom: 1px solid rgba(197,164,78,0.3);
+        }
+
+        .nav-bar ul {
+            display: flex;
+            list-style: none;
+            gap: 0;
+        }
+
+        .nav-bar li a {
+            display: block;
+            padding: 12px 22px;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            transition: all 0.2s;
+            border-right: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .nav-bar li a:hover,
+        .nav-bar li a.active {
+            background: var(--navy-deep);
+            color: var(--gold-light);
+        }
+
+        /* ===== CLASSIFICATION BANNER ===== */
+        .classification-banner {
+            background: repeating-linear-gradient(
+                45deg,
+                var(--red-seal),
+                var(--red-seal) 10px,
+                #7a1616 10px,
+                #7a1616 20px
+            );
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-family: 'Courier Prime', monospace;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            padding: 40px 0 60px;
+        }
+
+        /* ===== CASE HEADER SECTION ===== */
+        .case-header {
+            background: var(--paper);
+            border: 2px solid var(--border-govt);
+            padding: 32px 36px;
+            margin-bottom: 36px;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .case-header::before {
+            content: 'DECLASSIFIED';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-family: 'Courier Prime', monospace;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--red-stamp);
+            border: 3px solid var(--red-stamp);
+            padding: 4px 14px;
+            transform: rotate(12deg);
+            letter-spacing: 0.1em;
+            opacity: 0.8;
+        }
+
+        .case-header::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--navy), var(--gold), var(--navy));
+        }
+
+        .case-number {
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.8rem;
+            color: var(--ink-faded);
+            margin-bottom: 8px;
+            letter-spacing: 0.08em;
+        }
+
+        .case-header h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--navy);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .case-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-govt);
+        }
+
+        .case-meta-item {
+            font-size: 0.82rem;
+        }
+
+        .case-meta-item .label {
+            font-weight: 700;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-size: 0.7rem;
+        }
+
+        .case-meta-item .value {
+            font-family: 'Courier Prime', monospace;
+            color: var(--ink-faded);
+        }
+
+        /* ===== ALERT BOX ===== */
+        .alert-box {
+            background: #fff8e1;
+            border-left: 5px solid var(--gold);
+            padding: 16px 20px;
+            margin-bottom: 32px;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        .alert-box strong {
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        /* ===== MUGSHOT SECTION ===== */
+        .subject-profile {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 32px;
+            background: var(--paper);
+            border: 2px solid var(--border-govt);
+            padding: 32px;
+            margin-bottom: 36px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .mugshot-container {
+            position: relative;
+        }
+
+        .mugshot-container img {
+            width: 100%;
+            border: 3px solid var(--navy);
+            display: block;
+            filter: contrast(1.05) saturate(0.85);
+        }
+
+        .mugshot-label {
+            background: var(--navy);
+            color: var(--gold-light);
+            text-align: center;
+            padding: 6px;
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .subject-details h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.2rem;
+            color: var(--navy);
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .detail-item {
+            font-size: 0.82rem;
+            padding: 6px 0;
+            border-bottom: 1px dotted var(--border-govt);
+        }
+
+        .detail-item .dt {
+            font-weight: 700;
+            color: var(--navy);
+            text-transform: uppercase;
+            font-size: 0.68rem;
+            letter-spacing: 0.06em;
+        }
+
+        .detail-item .dd {
+            font-family: 'Courier Prime', monospace;
+            color: var(--ink-faded);
+            font-size: 0.85rem;
+        }
+
+        /* ===== SECTION HEADERS ===== */
+        .section-header {
+            font-family: 'Merriweather', serif;
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--navy);
+            margin-bottom: 24px;
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-header .section-icon {
+            font-size: 1.4rem;
+        }
+
+        .section-number {
+            font-family: 'Courier Prime', monospace;
+            background: var(--navy);
+            color: var(--gold-light);
+            padding: 2px 10px;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+        }
+
+        /* ===== EVIDENCE GRID ===== */
+        .evidence-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 36px;
+        }
+
+        .evidence-card {
+            background: var(--paper);
+            border: 2px solid var(--border-govt);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: box-shadow 0.3s;
+        }
+
+        .evidence-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+
+        .evidence-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 2px solid var(--border-govt);
+            filter: contrast(1.02) saturate(0.9);
+        }
+
+        .evidence-card .card-body {
+            padding: 16px 20px;
+        }
+
+        .evidence-tag {
+            display: inline-block;
+            background: var(--navy);
+            color: var(--gold-light);
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.65rem;
+            padding: 2px 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .evidence-card h4 {
+            font-family: 'Merriweather', serif;
+            font-size: 0.95rem;
+            color: var(--navy);
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .evidence-card p {
+            font-size: 0.8rem;
+            color: var(--ink-faded);
+            line-height: 1.5;
+        }
+
+        .evidence-card .exhibit-num {
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.7rem;
+            color: var(--red-stamp);
+            margin-top: 8px;
+            letter-spacing: 0.06em;
+        }
+
+        /* ===== REDACTED TEXT ===== */
+        .redacted {
+            background: var(--ink);
+            color: var(--ink);
+            padding: 0 4px;
+            user-select: none;
+            cursor: default;
+        }
+
+        .redacted:hover {
+            background: var(--ink);
+            color: var(--ink);
+        }
+
+        /* ===== DOCUMENT TABLE ===== */
+        .doc-table-container {
+            background: var(--paper);
+            border: 2px solid var(--border-govt);
+            margin-bottom: 36px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .doc-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.82rem;
+        }
+
+        .doc-table thead {
+            background: var(--navy);
+            color: #fff;
+        }
+
+        .doc-table th {
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.72rem;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+
+        .doc-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--cream-dark);
+            vertical-align: middle;
+        }
+
+        .doc-table tbody tr:hover {
+            background: var(--cream);
+        }
+
+        .doc-table tbody tr:nth-child(even) {
+            background: var(--paper-aged);
+        }
+
+        .doc-table tbody tr:nth-child(even):hover {
+            background: var(--cream-dark);
+        }
+
+        .doc-link {
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+
+        .doc-link:hover {
+            color: var(--red-seal);
+            text-decoration: underline;
+        }
+
+        .doc-link .icon {
+            font-size: 1.1rem;
+        }
+
+        .classification-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            font-size: 0.65rem;
+            font-family: 'Courier Prime', monospace;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-weight: 700;
+            border-radius: 2px;
+        }
+
+        .tag-secret {
+            background: #fde8e8;
+            color: var(--red-stamp);
+            border: 1px solid var(--red-stamp);
+        }
+
+        .tag-confidential {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #856404;
+        }
+
+        .tag-declassified {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #155724;
+        }
+
+        /* ===== TIMELINE ===== */
+        .timeline {
+            position: relative;
+            padding-left: 32px;
+            margin-bottom: 36px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--navy);
+        }
+
+        .timeline-entry {
+            position: relative;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            background: var(--paper);
+            border: 1px solid var(--border-govt);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+
+        .timeline-entry::before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 22px;
+            width: 13px;
+            height: 13px;
+            background: var(--gold);
+            border: 3px solid var(--navy);
+            border-radius: 50%;
+        }
+
+        .timeline-date {
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.75rem;
+            color: var(--red-seal);
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            margin-bottom: 4px;
+        }
+
+        .timeline-entry h4 {
+            font-family: 'Merriweather', serif;
+            font-size: 0.9rem;
+            color: var(--navy);
+            margin-bottom: 4px;
+        }
+
+        .timeline-entry p {
+            font-size: 0.8rem;
+            color: var(--ink-faded);
+            line-height: 1.5;
+        }
+
+        /* ===== FULL-WIDTH EVIDENCE IMAGE ===== */
+        .full-evidence {
+            background: var(--paper);
+            border: 2px solid var(--border-govt);
+            margin-bottom: 36px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .full-evidence img {
+            width: 100%;
+            max-height: 520px;
+            object-fit: cover;
+            display: block;
+            filter: saturate(0.9) contrast(1.02);
+        }
+
+        .full-evidence .caption {
+            padding: 14px 20px;
+            background: var(--navy);
+            color: rgba(255,255,255,0.85);
+            font-size: 0.78rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+
+        .full-evidence .caption .exhibit {
+            font-family: 'Courier Prime', monospace;
+            color: var(--gold-light);
+            letter-spacing: 0.1em;
+            font-size: 0.72rem;
+        }
+
+        /* ===== DOSSIER TEXT BLOCK ===== */
+        .dossier-block {
+            background: var(--paper);
+            border: 2px solid var(--border-govt);
+            padding: 28px 32px;
+            margin-bottom: 36px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            position: relative;
+        }
+
+        .dossier-block::before {
+            content: 'CONFIDENTIAL';
+            position: absolute;
+            top: -10px;
+            left: 24px;
+            background: var(--paper);
+            padding: 0 8px;
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.7rem;
+            color: var(--red-stamp);
+            letter-spacing: 0.15em;
+            font-weight: 700;
+        }
+
+        .dossier-block p {
+            font-size: 0.88rem;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            color: var(--ink-faded);
+        }
+
+        .dossier-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            background: var(--navy-deep);
+            color: rgba(255,255,255,0.5);
+            padding: 32px 0;
+            border-top: 4px solid var(--gold);
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .footer-col h5 {
+            color: var(--gold-light);
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 10px;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+
+        .footer-col p,
+        .footer-col a {
+            font-size: 0.75rem;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.45);
+        }
+
+        .footer-col a {
+            text-decoration: none;
+            display: block;
+        }
+
+        .footer-col a:hover {
+            color: var(--gold-light);
+        }
+
+        .footer-bottom {
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            text-align: center;
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.3);
+            letter-spacing: 0.04em;
+        }
+
+        /* ===== WATERMARK ===== */
+        .watermark {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-35deg);
+            font-family: 'Courier Prime', monospace;
+            font-size: 6rem;
+            font-weight: 700;
+            color: rgba(139, 26, 26, 0.04);
+            pointer-events: none;
+            z-index: 0;
+            white-space: nowrap;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        /* ===== STAMP OVERLAY ON IMAGES ===== */
+        .stamp-overlay {
+            position: relative;
+        }
+
+        .stamp-overlay::after {
+            content: 'EVIDENCE';
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            font-family: 'Courier Prime', monospace;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--red-stamp);
+            border: 3px solid var(--red-stamp);
+            padding: 4px 16px;
+            transform: rotate(-8deg);
+            letter-spacing: 0.12em;
+            opacity: 0.7;
+            background: rgba(255,255,255,0.7);
+        }
+
+        /* ===== PDF EMBED ===== */
+        .pdf-embed-section {
+            margin-bottom: 36px;
+        }
+
+        .pdf-embed {
+            width: 100%;
+            height: 85vh;
+            min-height: 700px;
+            border: 2px solid var(--border-govt);
+            background: #fff;
+        }
+
+        .pdf-header {
+            background: var(--navy);
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+        }
+
+        .pdf-header .pdf-title {
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+
+        .pdf-header .pdf-class {
+            font-family: 'Courier Prime', monospace;
+            color: var(--gold-light);
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .subject-profile {
+                grid-template-columns: 1fr;
+            }
+
+            .header-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-bar ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .case-header::before {
+                position: static;
+                display: block;
+                transform: none;
+                text-align: center;
+                margin-bottom: 12px;
+            }
+
+            .evidence-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes stampSlam {
+            0% { transform: rotate(-8deg) scale(3); opacity: 0; }
+            60% { transform: rotate(-8deg) scale(0.95); opacity: 0.8; }
+            100% { transform: rotate(-8deg) scale(1); opacity: 0.7; }
+        }
+
+        .evidence-card:hover .stamp-overlay::after {
+            animation: stampSlam 0.3s ease-out;
+        }
+
+        /* ===== SCANNING LINE EFFECT ===== */
+        .scan-effect {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .scan-effect::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: rgba(197, 164, 78, 0.3);
+            animation: scanline 4s linear infinite;
+        }
+
+        @keyframes scanline {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="watermark">CLASSIFIED</div>
+
+    <!-- GOVERNMENT BANNER -->
+    <div class="govt-banner">
+        <div class="container">
+            <span class="flag-icon">&#127482;&#127480;</span>
+            <span>An official website of the United States government. <a href="#">Here's how you know</a></span>
+        </div>
+    </div>
+
+    <!-- SITE HEADER -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="seal">
+                    <div class="seal-text">
+                        <span class="eagle">&#129413;</span>
+                        DEPT OF<br>JUSTICE
+                    </div>
+                </div>
+                <div class="header-text">
+                    <h1>
+                        <span class="dept">U.S. Department of Justice &mdash; Federal Bureau of Investigation</span>
+                        The Jawad Files
+                    </h1>
+                    <div class="subtitle">Public Release of Declassified Documents &bull; Case No. 2024-JWD-88204</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav class="nav-bar">
+        <div class="container">
+            <ul>
+                <li><a href="#overview" class="active">Overview</a></li>
+                <li><a href="#subject">Subject Profile</a></li>
+                <li><a href="#evidence">Evidence</a></li>
+                <li><a href="#documents">Documents</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#witness">Witness Statements</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CLASSIFICATION BANNER -->
+    <div class="classification-banner">
+        &#9888; formerly classified &mdash; released under court order 2024-FC-8812 &#9888;
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="container">
+
+            <!-- CASE HEADER -->
+            <section class="case-header" id="overview">
+                <div class="case-number">CASE FILE: DOJ-2024-JWD-88204-A &bull; FBI FIELD OFFICE: WASHINGTON, D.C.</div>
+                <h2>Investigation into the Activities of Jawad &ldquo;Big J&rdquo; <span class="redacted">████████</span></h2>
+                <p style="font-size: 0.88rem; color: var(--ink-faded); max-width: 680px; line-height: 1.6; margin-top: 8px;">
+                    The following documents, photographs, and intelligence materials have been declassified pursuant to
+                    Federal Court Order 2024-FC-8812 and are made available to the public as part of ongoing transparency
+                    requirements under the Freedom of Information Act (FOIA).
+                </p>
+                <div class="case-meta">
+                    <div class="case-meta-item">
+                        <div class="label">Lead Agent</div>
+                        <div class="value">SSA <span class="redacted">██████</span> Thompson</div>
+                    </div>
+                    <div class="case-meta-item">
+                        <div class="label">Date Opened</div>
+                        <div class="value">03/14/2023</div>
+                    </div>
+                    <div class="case-meta-item">
+                        <div class="label">Classification</div>
+                        <div class="value">TOP SECRET / SCI</div>
+                    </div>
+                    <div class="case-meta-item">
+                        <div class="label">Status</div>
+                        <div class="value">ACTIVE — ONGOING</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ALERT BOX -->
+            <div class="alert-box">
+                <strong>&#9888; Public Notice:</strong> Certain names, locations, and operational details have been
+                redacted to protect ongoing investigations and the safety of cooperating witnesses. Unauthorized
+                distribution of these materials may constitute a violation of 18 U.S.C. &sect; 1924.
+            </div>
+
+            <!-- SUBJECT PROFILE -->
+            <h3 class="section-header" id="subject">
+                <span class="section-number">SEC. I</span>
+                Subject Profile
+            </h3>
+
+            <div class="subject-profile">
+                <div class="mugshot-container">
+                    <img src="images/realistic_mugshot.png" alt="Subject booking photograph">
+                    <div class="mugshot-label">Booking Photo &mdash; ID: 88204-A &mdash; 05/12/2024</div>
+                </div>
+                <div class="subject-details">
+                    <h3>Primary Subject Dossier</h3>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <div class="dt">Full Name</div>
+                            <div class="dd">Jawad Chams</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="dt">Known Aliases</div>
+                            <div class="dd">"Big J", "The Architect"</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="dt">Date of Birth</div>
+                            <div class="dd">02/11/2005</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="dt">Subject ID</div>
+                            <div class="dd">88204-A</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="dt">Nationality</div>
+                            <div class="dd">Lebanese</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="dt">Height / Weight</div>
+                            <div class="dd">5'5" / 200 lbs</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="dt">Risk Level</div>
+                            <div class="dd" style="color: var(--red-stamp); font-weight: 700;">EXTREMELY HIGH</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="dt">Known Associates</div>
+                            <div class="dd">See Exhibit D, Appendix III</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DOSSIER TEXT -->
+            <div class="dossier-block">
+                <p>
+                    Subject JAWAD was first brought to the Bureau's attention in <span class="redacted">████</span> 2023,
+                    following intercepted communications between <span class="redacted">██████████</span> and an
+                    unidentified foreign national. Surveillance operations (codename: <strong>OPERATION SANDCASTLE</strong>)
+                    revealed a pattern of high-value transactions, undisclosed international travel, and contact with
+                    individuals already flagged under existing counter-intelligence operations.
+                </p>
+                <p>
+                    Analysis of subject's digital footprint uncovered connections to at least
+                    <strong>fourteen (14) persons of interest</strong>, including <span class="redacted">████████</span>,
+                    a known figure in <span class="redacted">████████████</span> circles. Field agents noted subject
+                    displayed "an unusual level of operational security for a civilian," including use of burner devices,
+                    encrypted messaging platforms, and what one analyst described as "genuinely unhinged Snapchat activity."
+                </p>
+                <p>
+                    The subject's island compound (coordinates: <span class="redacted">██.████° N, ██.████° W</span>)
+                    was identified via satellite imagery in early 2024. Thermal imaging revealed gatherings of
+                    15–40 individuals at irregular intervals, with luxury vessels arriving from <span class="redacted">██████</span>
+                    and <span class="redacted">████████</span>.
+                </p>
+            </div>
+
+            <!-- PHOTOGRAPHIC EVIDENCE -->
+            <h3 class="section-header" id="evidence">
+                <span class="section-number">SEC. II</span>
+                Photographic Evidence
+            </h3>
+
+            <div class="evidence-grid">
+                <div class="evidence-card">
+                    <div class="stamp-overlay">
+                        <img src="images/edited_staged_scene.jpeg" alt="Exhibit A - Subject meeting with known associate">
+                    </div>
+                    <div class="card-body">
+                        <span class="evidence-tag">Surveillance Photo</span>
+                        <h4>Subject Meeting with Known Associate</h4>
+                        <p>
+                            Photograph obtained during Operation SANDCASTLE showing subject in private meeting
+                            with <span class="redacted">██████</span>. Note: flight logs visible on screen behind
+                            subjects list multiple persons of interest.
+                        </p>
+                        <div class="exhibit-num">EXHIBIT A &bull; IMG-SC-2024-0047</div>
+                    </div>
+                </div>
+
+                <div class="evidence-card">
+                    <div class="stamp-overlay">
+                        <img src="images/diddy_party.png" alt="Exhibit B - Subject with associates at private gathering">
+                    </div>
+                    <div class="card-body">
+                        <span class="evidence-tag">Intercepted Photo</span>
+                        <h4>Private Gathering &mdash; Undisclosed Location</h4>
+                        <p>
+                            Subject photographed at private event with <span class="redacted">██████</span> and
+                            unidentified individual. Bottles recovered from scene tested positive for
+                            <span class="redacted">████████████</span>. See toxicology report Appendix VII.
+                        </p>
+                        <div class="exhibit-num">EXHIBIT B &bull; IMG-INT-2024-0112</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FULL WIDTH - ISLAND PHOTO -->
+            <div class="full-evidence scan-effect">
+                <img src="images/ChatGPT Image Feb 9, 2026 at 02_12_12 PM.png" alt="Exhibit C - Subject at island compound">
+                <div class="caption">
+                    <span>EXHIBIT C &mdash; Subject photographed at island compound. Coordinates redacted. Structure matches satellite imagery from Operation SANDCASTLE recon flights.</span>
+                    <span class="exhibit">IMG-RECON-2024-0203</span>
+                </div>
+            </div>
+
+            <!-- SNAPCHAT EVIDENCE -->
+            <h3 class="section-header">
+                <span class="section-number">SEC. III</span>
+                Digital Forensics &mdash; Social Media Intercepts
+            </h3>
+
+            <div class="subject-profile" style="grid-template-columns: 280px 1fr;">
+                <div class="mugshot-container">
+                    <img src="images/IMG_3822.jpg" alt="Intercepted social media content" style="height: auto;">
+                    <div class="mugshot-label">Intercepted Snapchat &mdash; Device #JWD-07</div>
+                </div>
+                <div class="subject-details">
+                    <h3>Digital Evidence Analysis</h3>
+                    <div class="dossier-block" style="border: none; padding: 0; margin: 0; box-shadow: none;">
+                        <p style="margin-top: 0;">
+                            Forensic extraction of subject's mobile device (Device ID: <span class="redacted">████</span>-JWD-07)
+                            yielded over <strong>14,000 messages</strong>, <strong>2,300 images</strong>, and
+                            <strong>847 videos</strong> across encrypted and standard messaging platforms.
+                        </p>
+                        <p>
+                            Of particular note is the subject's Snapchat activity, which analysts have described
+                            as "deeply alarming" and "potentially the most incriminating social media usage in
+                            Bureau history." The intercepted content (sample shown, Exhibit D) demonstrates a
+                            pattern of <span class="redacted">████████████</span> behavior consistent with
+                            profiles outlined in the <span class="redacted">██████</span> behavioral analysis unit's
+                            preliminary assessment.
+                        </p>
+                        <p>
+                            <strong>Analyst Note:</strong> <em>"In twenty-two years at the Bureau, I have never seen
+                            someone voluntarily create this much self-incriminating evidence. Subject appears to
+                            have zero awareness of digital permanence."</em>
+                            <br>&mdash; SSA <span class="redacted">████████</span>, Cyber Division
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DOCUMENT RELEASES -->
+            <h3 class="section-header" id="documents">
+                <span class="section-number">SEC. IV</span>
+                Declassified Document Releases
+            </h3>
+
+            <div class="doc-table-container">
+                <table class="doc-table">
+                    <thead>
+                        <tr>
+                            <th>Document</th>
+                            <th>Type</th>
+                            <th>Date</th>
+                            <th>Classification</th>
+                            <th>Pages</th>
+                            <th>Access</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="images/arrest_warrant.pdf" class="doc-link" target="_blank">
+                                    <span class="icon">&#128196;</span>
+                                    Federal Arrest Warrant
+                                </a>
+                            </td>
+                            <td>Warrant</td>
+                            <td>05/12/2024</td>
+                            <td><span class="classification-tag tag-declassified">DECLASSIFIED</span></td>
+                            <td>4</td>
+                            <td><a href="images/arrest_warrant.pdf" target="_blank" class="doc-link">View PDF</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="images/flight_logs_analysis.pdf" class="doc-link" target="_blank">
+                                    <span class="icon">&#128196;</span>
+                                    Flight Logs &mdash; Analysis Report
+                                </a>
+                            </td>
+                            <td>Intelligence</td>
+                            <td>03/22/2024</td>
+                            <td><span class="classification-tag tag-secret">SECRET</span></td>
+                            <td>12</td>
+                            <td><a href="images/flight_logs_analysis.pdf" target="_blank" class="doc-link">View PDF</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="images/financial_ledgers.pdf" class="doc-link" target="_blank">
+                                    <span class="icon">&#128196;</span>
+                                    Financial Ledgers &mdash; Offshore Accounts
+                                </a>
+                            </td>
+                            <td>Financial</td>
+                            <td>04/01/2024</td>
+                            <td><span class="classification-tag tag-secret">SECRET</span></td>
+                            <td>8</td>
+                            <td><a href="images/financial_ledgers.pdf" target="_blank" class="doc-link">View PDF</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="images/intelligence_briefing.pdf" class="doc-link" target="_blank">
+                                    <span class="icon">&#128196;</span>
+                                    Intelligence Briefing &mdash; OPERATION SANDCASTLE
+                                </a>
+                            </td>
+                            <td>Briefing</td>
+                            <td>02/15/2024</td>
+                            <td><span class="classification-tag tag-confidential">CONFIDENTIAL</span></td>
+                            <td>16</td>
+                            <td><a href="images/intelligence_briefing.pdf" target="_blank" class="doc-link">View PDF</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="images/witness_affidavits.pdf" class="doc-link" target="_blank">
+                                    <span class="icon">&#128196;</span>
+                                    Witness Affidavits &mdash; Sealed Testimony
+                                </a>
+                            </td>
+                            <td>Legal</td>
+                            <td>04/30/2024</td>
+                            <td><span class="classification-tag tag-secret">SECRET</span></td>
+                            <td>22</td>
+                            <td><a href="images/witness_affidavits.pdf" target="_blank" class="doc-link">View PDF</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- EMBEDDED PDF VIEWER -->
+            <div class="pdf-embed-section">
+                <div class="pdf-header">
+                    <span class="pdf-title">&#128196; Federal Arrest Warrant &mdash; Case No. 2024-JWD-88204</span>
+                    <span class="pdf-class">DECLASSIFIED</span>
+                </div>
+                <iframe class="pdf-embed" src="images/arrest_warrant.pdf" title="Arrest Warrant"></iframe>
+            </div>
+
+            <div class="pdf-embed-section">
+                <div class="pdf-header">
+                    <span class="pdf-title">&#128196; Intelligence Briefing &mdash; OPERATION SANDCASTLE</span>
+                    <span class="pdf-class">CONFIDENTIAL // NOFORN</span>
+                </div>
+                <iframe class="pdf-embed" src="images/intelligence_briefing.pdf" title="Intelligence Briefing"></iframe>
+            </div>
+
+            <!-- TIMELINE -->
+            <h3 class="section-header" id="timeline">
+                <span class="section-number">SEC. V</span>
+                Investigative Timeline
+            </h3>
+
+            <div class="timeline">
+                <div class="timeline-entry">
+                    <div class="timeline-date">MARCH 14, 2023</div>
+                    <h4>Case File Opened</h4>
+                    <p>FBI Washington Field Office opens preliminary investigation following tip from <span class="redacted">██████████</span> intelligence services regarding subject's financial activities.</p>
+                </div>
+                <div class="timeline-entry">
+                    <div class="timeline-date">JUNE 2, 2023</div>
+                    <h4>FISA Warrant Approved</h4>
+                    <p>Foreign Intelligence Surveillance Court grants warrant for electronic surveillance of subject's communications. Operation SANDCASTLE formally launched.</p>
+                </div>
+                <div class="timeline-entry">
+                    <div class="timeline-date">SEPTEMBER 19, 2023</div>
+                    <h4>Island Compound Identified</h4>
+                    <p>NRO satellite imagery identifies private compound on <span class="redacted">████████</span> island. Thermal scans confirm regular large gatherings.</p>
+                </div>
+                <div class="timeline-entry">
+                    <div class="timeline-date">JANUARY 8, 2024</div>
+                    <h4>Flight Log Subpoena</h4>
+                    <p>Grand jury subpoena issued for private aviation records. Analysis reveals <strong>47 flights</strong> to and from the island compound over 18 months.</p>
+                </div>
+                <div class="timeline-entry">
+                    <div class="timeline-date">MARCH 22, 2024</div>
+                    <h4>Financial Records Obtained</h4>
+                    <p>Offshore banking records subpoenaed. Forensic accounting identifies $<span class="redacted">██</span>.7M in unexplained transfers across <span class="redacted">██</span> shell companies in 4 jurisdictions.</p>
+                </div>
+                <div class="timeline-entry">
+                    <div class="timeline-date">MAY 12, 2024</div>
+                    <h4>Federal Arrest Warrant Issued</h4>
+                    <p>U.S. District Court for the Southern District of <span class="redacted">████████</span> issues warrant. Subject taken into custody without incident at <span class="redacted">██████████</span>.</p>
+                </div>
+                <div class="timeline-entry">
+                    <div class="timeline-date">FEBRUARY 9, 2026</div>
+                    <h4>Public Document Release</h4>
+                    <p>Court orders partial declassification of case materials. The Jawad Files made available to public via DOJ secure document portal.</p>
+                </div>
+            </div>
+
+            <!-- WITNESS STATEMENTS -->
+            <h3 class="section-header" id="witness">
+                <span class="section-number">SEC. VI</span>
+                Sealed Witness Testimony (Excerpts)
+            </h3>
+
+            <div class="dossier-block">
+                <p>
+                    <strong>WITNESS 1 (Identity Protected):</strong><br>
+                    <em>"He kept saying he was 'building something bigger than anyone could imagine.' At first I
+                    thought he meant a tech startup. Then I saw the island. Then I saw the guest list. Then I saw
+                    the <span class="redacted">████████████</span>. That's when I called the FBI."</em>
+                </p>
+            </div>
+
+            <div class="dossier-block" style="margin-top: -12px;">
+                <p>
+                    <strong>WITNESS 2 (<span class="redacted">████████</span>):</strong><br>
+                    <em>"The parties were... look, I signed an NDA, but I think federal law supersedes that.
+                    There were people there I recognized from <span class="redacted">████████</span>.
+                    One of them was definitely <span class="redacted">██████ ████████</span>. The baby oil
+                    situation was... I don't even know how to describe it. Industrial quantities."</em>
+                </p>
+            </div>
+
+            <div class="dossier-block" style="margin-top: -12px;">
+                <p>
+                    <strong>WITNESS 3 (Cooperating, Plea Agreement):</strong><br>
+                    <em>"Jawad had a system. Everything ran through <span class="redacted">████████</span>.
+                    The flights, the money, the <span class="redacted">████████████</span>. He called it
+                    'the algorithm.' I know that sounds made up but he literally called his criminal
+                    operation 'the algorithm.' He thought it was funny."</em>
+                </p>
+            </div>
+
+            <!-- EMBEDDED PDF - AFFIDAVITS -->
+            <div class="pdf-embed-section" style="margin-top: 36px;">
+                <div class="pdf-header">
+                    <span class="pdf-title">&#128196; Witness Affidavits &mdash; Sealed Testimony (Partially Redacted)</span>
+                    <span class="pdf-class">SECRET // ORCON</span>
+                </div>
+                <iframe class="pdf-embed" src="images/witness_affidavits.pdf" title="Witness Affidavits"></iframe>
+            </div>
+
+            <div class="pdf-embed-section">
+                <div class="pdf-header">
+                    <span class="pdf-title">&#128196; Flight Logs Analysis &mdash; Private Aviation Records</span>
+                    <span class="pdf-class">SECRET // NOFORN</span>
+                </div>
+                <iframe class="pdf-embed" src="images/flight_logs_analysis.pdf" title="Flight Logs Analysis"></iframe>
+            </div>
+
+            <div class="pdf-embed-section">
+                <div class="pdf-header">
+                    <span class="pdf-title">&#128196; Financial Ledgers &mdash; Offshore Account Analysis</span>
+                    <span class="pdf-class">SECRET // REL FVEY</span>
+                </div>
+                <iframe class="pdf-embed" src="images/financial_ledgers.pdf" title="Financial Ledgers"></iframe>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-col">
+                    <h5>U.S. Department of Justice</h5>
+                    <p>950 Pennsylvania Avenue, NW<br>Washington, DC 20530-0001</p>
+                    <p style="margin-top: 8px;">Switchboard: (202) 514-2000</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Document Access</h5>
+                    <a href="#">FOIA Request Portal</a>
+                    <a href="#">Declassification Index</a>
+                    <a href="#">Case File Archive</a>
+                    <a href="#">Inspector General Reports</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Legal</h5>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Accessibility Statement</a>
+                    <a href="#">Information Quality</a>
+                    <a href="#">No FEAR Act Data</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Classification Authority</h5>
+                    <p>Original Classification Authority:<br>Director, Federal Bureau of Investigation</p>
+                    <p style="margin-top: 8px; font-size: 0.68rem;">
+                        Declassification Date: 02/09/2026<br>
+                        Review Authority: ISCAP
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                OFFICIAL USE ONLY &mdash; This website is a parody and is not affiliated with any government agency.
+                All content is fictional and created for entertainment purposes only. &copy; 2026
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth scroll for nav -->
+    <script>
+        document.querySelectorAll('.nav-bar a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                document.querySelectorAll('.nav-bar a').forEach(a => a.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Highlight active nav on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('[id]');
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            document.querySelectorAll('.nav-bar a').forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) {
+                    a.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
